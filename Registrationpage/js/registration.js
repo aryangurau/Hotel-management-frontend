@@ -16,6 +16,7 @@ const submitForm = () => {
   const pass = document.getElementById("pass").value;
   const repeatPass = document.getElementById("repeatPass").value;
   const msgClass = document.getElementsByClassName("msg")[0];
+  const pwClass = document.getElementsByClassName("pw")[0];
 
   // Check for missing data
   if (!firstName || !lastName || !email || !pass || !repeatPass) {
@@ -26,8 +27,8 @@ const submitForm = () => {
 
   // Check if passwords match
   if (pass !== repeatPass) {
-    msgClass.innerHTML = "Passwords do not match";
-    msgClass.style.color = "red";
+    pwClass.innerHTML = "Passwords do not match";
+    pwClass.style.color = "red";
     return;
   }
 
