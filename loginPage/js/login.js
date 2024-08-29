@@ -17,7 +17,7 @@ const loginForm = () => {
 
   //checks for above data
   if (!email || !pass) {
-    msgClass.innerHTML = "please fillUp the form to continue";
+    msgClass.innerHTML = "please the credentials ";
     msgClass.style.color = "red";
 
     return;
@@ -31,7 +31,7 @@ const loginForm = () => {
   // }
 
   // If all checks are correct then display success message
-  msgClass.innerHTML = "Thankyou for Contacting us";
+  msgClass.innerHTML = "Logged in Successfuly";
   msgClass.style.color = "green";
 
   // Hide the thank you message after 4 seconds
