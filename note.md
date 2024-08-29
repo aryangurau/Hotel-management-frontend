@@ -19,4 +19,4 @@ c.Order list
 d.order Detail
 e.profile page
 f.User list
-g.User detail
+g.User details
