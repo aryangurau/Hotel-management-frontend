@@ -4,48 +4,41 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   font-family: Arial, sans-serif;
-  /* background-color: #bdbbbb; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-/* label {
-    display: block;
-    margin-bottom: 5px;
-  } */
 
-.contact-container {
+  min-height: 60vh;
+} */
+/* label {
+      display: block;
+      margin-bottom: 5px;
+    } */
+
+ .main {
+  display: flex;
   margin: auto;
-  width: 1280px;
+min-height: 96vh;
   padding: 50px;
-  border-radius: 10px;
-  /* box-shadow: 0 0 10px rgba(187, 138, 138, 0.1); */
-  max-width: 500px;
-}
+  border-radius: 10px; }
+  
+
 .login {
+  
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* gap: 20px; */
-}
-.logo {
-  /* position: absolute;
-    left: 10px; */
-}
-.img-logo {
-  width: 60px;
-  border-radius: 50%;
 }
 
+.img-logo {
+  width: 70px;
+  border-radius: 50%;
+}
 
 .color {
   color: rgb(78, 79, 78);
 }
 .btn {
-  background-color: #0a1c0e;
+  background-color: #614eed;
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -54,13 +47,19 @@ body {
 }
 
 .btn:hover {
-  background-color: #087527;
+  background-color: #073474;
+  color: white;
 }
 
 .form {
   border: 1px solid black;
   padding: 25px;
   border-radius: 15px;
+
+}
+#msg{
+  border-radius: 15px;
+  padding: 15px;
 }
 
 .form input {
@@ -68,9 +67,10 @@ body {
   margin-top: 30px;
   font-size: 15px;
   border: 1px solid rgb(69, 66, 60);
-  /* border-top: none;
-    border-right: none;
-    border-left: none; */
+  
   border-radius: 10px;
 }
 
+textarea:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
