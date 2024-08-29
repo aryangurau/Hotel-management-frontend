@@ -22,7 +22,7 @@
             <div class="card shadow-sm">
               <div class="card-body">
                 <!-- form start -->
-                <form class="form">
+                <form class="form needs-validation" novalidate>
                   <div class="row login flex-md-row ms-md-3">
                     <div class="col-md-3">
                       <img class="img-logo" src="./img/logo3.jpg" alt="" />
@@ -35,11 +35,23 @@
                     <input
                       type="text"
                       class="form-control"
-                      id="fullName"
-                      aria-describedby="emailHelp"
-                      placeholder="Enter Full Name"
-                      autofocus
+                      id="firstName"
+                      placeholder="first name"
+                      required
                     />
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">
+                      Please choose a username.
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="lastName"
+                      aria-describedby="emailHelp"
+                      placeholder="last name"
+                      required
+                    />
+                    <div class="invalid-feedback">Please enter last name</div>
                   </div>
                   <div class="mb-3">
                     <input
@@ -48,9 +60,10 @@
                       id="email"
                       aria-describedby="emailHelp"
                       placeholder="Enter email"
-                      autofocus
                       required
                     />
+                    <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Please enter email</div>
                   </div>
                   <div class="valid-feedback">Looks good!</div>
                   <div class="mb-3">
@@ -59,7 +72,10 @@
                       class="form-control"
                       id="pass"
                       placeholder="password"
+                      required
                     />
+                    <!-- <div class="valid-feedback">Looks good!</div>
+                    <div class="invalid-feedback">Please enter password</div> -->
                   </div>
                   <div class="mb-3">
                     <input
@@ -67,7 +83,9 @@
                       class="form-control"
                       id="repeatPass"
                       placeholder="Repeat password"
+                      required
                     />
+                    <!-- <div class="invalid-feedback">password donot match</div> -->
                   </div>
                   <div class="mb-3 form-check">
                     <input

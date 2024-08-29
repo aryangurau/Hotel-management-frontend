@@ -9,20 +9,18 @@ const showHide = () => {
     repeatPass.type = "password";
   }
 };
-
 const submitForm = () => {
-  // Display the thank you message
-  const fullName = document.getElementById("fullName").value;
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
   const email = document.getElementById("email").value;
   const pass = document.getElementById("pass").value;
   const repeatPass = document.getElementById("repeatPass").value;
   const msgClass = document.getElementsByClassName("msg")[0];
 
-  //checks for above data
-  if (!fullName || !email || !pass || !repeatPass) {
-    msgClass.innerHTML = "please fillUp the form to continue";
+  // Check for missing data
+  if (!firstName || !lastName || !email || !pass || !repeatPass) {
+    msgClass.innerHTML = "Please fill up the form to continue";
     msgClass.style.color = "red";
-
     return;
   }
 
@@ -33,8 +31,8 @@ const submitForm = () => {
     return;
   }
 
-  // If all checks are correct then display success message
-  msgClass.innerHTML = "Thankyou for Contacting us";
+  // If all checks are correct, display success message
+  msgClass.innerHTML = "Thank you for contacting us";
   msgClass.style.color = "green";
 
   // Hide the thank you message after 4 seconds
@@ -42,6 +40,29 @@ const submitForm = () => {
     msgClass.innerHTML = "";
   }, 4000);
 
-  //clearing the form after fillup
+  // Clear the form after successful submission
   document.getElementById("form").reset();
 };
+
+(() => {
+  "use strict";
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll(".needs-validation");
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach((form) => {
+    form.addEventListener(
+      "submit",
+      (event) => {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+
+        form.classList.add("was-validated");
+      },
+      false
+    );
+  });
+})();
