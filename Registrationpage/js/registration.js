@@ -19,11 +19,11 @@ const submitForm = () => {
   const pwClass = document.getElementsByClassName("pw")[0];
 
   // Check for missing data
-  if (!firstName || !lastName || !email || !pass || !repeatPass) {
-    msgClass.innerHTML = "Please fill up the form to continue";
-    msgClass.style.color = "red";
-    return;
-  }
+  // if (!firstName || !lastName || !email || !pass || !repeatPass) {
+  //   msgClass.innerHTML = "Please fill up the form to continue";
+  //   msgClass.style.color = "red";
+  //   return;
+  // }
 
   // Check if passwords match
   if (pass !== repeatPass) {
@@ -32,16 +32,16 @@ const submitForm = () => {
     return;
   }
 
-  // If all checks are correct, display success message
-  msgClass.innerHTML = "Thank you for contacting us";
-  msgClass.style.color = "green";
+  // // If all checks are correct, display success message
+  // msgClass.innerHTML = "Thank you for contacting us";
+  // msgClass.style.color = "green";
 
-  // Hide the thank you message after 4 seconds
-  setTimeout(() => {
-    msgClass.innerHTML = "";
-  }, 4000);
+  // // Hide the thank you message after 4 seconds
+  // setTimeout(() => {
+  //   msgClass.innerHTML = "";
+  // }, 4000);
 
-  // Clear the form after successful submission
+  // // Clear the form after successful submission
   document.getElementById("form").reset();
 };
 
