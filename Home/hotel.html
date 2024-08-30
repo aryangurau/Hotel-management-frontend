@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./hotel.css" />
+  </head>
+  <body>
+    <!-- top  start-->
+  
+    <section class="container-fluid head-top">
+      <div class="container top-con">
+        <div class="row">
+          <!-- logo -->
+          <div class="col-lg-6">
+            <h2>Booking.com</h2>
+          </div>
+          <!-- logo end -->
+
+          <!--  nav 1 listing and registration -->
+          <div class="col-lg-6 ms-0 listing">
+            <nav class="navbar navbar-expand-lg">
+              <div class="container-fluid ms-auto d-flex align-items-start">
+                <a class="navbar-brand" href="#">NPR</a>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarNavDropdown"
+                  aria-controls="navbarNavDropdown"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="#">
+                        <img
+                          class="state"
+                          src="https://wallpapercave.com/wp/wp4034154.jpg"
+                          alt=""
+                        />
+                      </a>
+                    </li>
+                    <li class="nav-item ms-md-2 p-2">
+                      <a href=""> <i class="bi bi-question-circle"></i></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">list your property</a>
+                    </li>
+                    <li class="nav-item">
+                      <button
+                        class="btn ms-md-2 bg-light text-dark register-login-btn"
+                      >
+                        Register
+                      </button>
+                    </li>
+                    <li class="nav-item">
+                      <button
+                        class="btn ms-md-2 bg-light text-dark register-login-btn"
+                      >
+                        sign in
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+          <!--nav 1 listing and registration end -->
+        </div>
+
+        <!-- nav 2  start-->
+        <div class="row">
+          <div class="col-lg-6 col-md-5">
+            <nav class="navbar navbar-expand-md">
+              <div class="container-fluid ms-auto d-flex align-items-center">
+                <a class="navbar-brand bg-primary rounded-pill px-4" href="#"
+                  ><i class="bi bi-hospital px-1"></i>Stays</a
+                >
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button> -->
+                <!-- <div class="collapse navbar-collapse" id="navbarNavDropdown"> -->
+                <ul
+                  class="navbar-nav container-fluid ms-auto d-flex align-items-start"
+                >
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><i class="bi bi-airplane px-1"></i>flights</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <i class="bi bi-car-front px-1"></i>Car rentals</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><i class="bi bi-bar-chart-fill px-1"></i>Attractions</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"
+                      ><i class="bi bi-taxi-front-fill px-1"></i> taxis</a
+                    >
+                  </li>
+                </ul>
+                <!-- </div> -->
+              </div>
+            </nav>
+          </div>
+        </div>
+        <!-- nav 2 end-->
+
+        <!-- top content start-->
+        <div class="row py-5">
+          <h1>Find you next stay</h1>
+          <h2>Search deals on hotels, homes, and much more</h2>
+        </div>
+        <!-- top content end -->
+      </div>
+      <!-- top end -->
+    </section>
+   <!-- <div class="main"> -->
+      <!-- search start -->
+      <div class="container search-section">
+        <div class="row justify-content-center">
+          <form class="row g-3 justify-content-center form">
+            <!-- Destination -->
+            <div class="col-12 col-md-3">
+              <input type="text" class="form-control text-center" placeholder="Destination" />
+            </div>
+            <!-- Check-in & Check-out -->
+            <div class="col-12 col-md-4">
+              <input type="date" class="form-control" />
+            </div>
+            <!-- Additional Field -->
+            <div class="col-12 col-md-3 position-relative guest">
+              <i class="bi bi-person"></i>
+              <input type="text" class="form-control text-center" placeholder="Total guests" />
+            </div>
+            <!-- Search Button -->
+            <div class="col-12 col-md-1">
+              <button class="btn">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+
+      <!-- search end -->
+
+      <!-- hotels card -->
+      <div class="container con mt-5 pt-5">
+        <h2 class="text-dark fs-2 text-ms">Explore Hotels</h2>
+        <div class="row justify-content-center">
+          <div class="card col-lg-3 col-md-5 shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 20rem">
+            <img
+          
+              src="https://cf.bstatic.com/xdata/images/hotel/square600/522067066.jpg?k=7bce548c7382b551be6362393c59fdd4633c49ee400cf9dd4d52eb5f4ef98f89&o="
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-md-5 shadow  p-3 mb-5 bg-body-tertiary rounded" style="width: 20rem">
+            <img
+            
+              src="https://i.ytimg.com/vi/gsaLaYSizk8/maxresdefault.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-md-5 shadow  p-3 mb-5 bg-body-tertiary rounded" style="width: 20rem">
+            <img
+              src="https://cf.bstatic.com/xdata/images/hotel/square600/283374329.jpg?k=3ac15dffc1efe76b14ff3436242681ddc77e977bddd9b18b7f2283713334ca48&o="
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-md-5 shadow  p-3 mb-5 bg-body-tertiary rounded" style="width: 20rem">
+            <img
+              src="https://r-xx.bstatic.com/xdata/images/hotel/263x210/100235855.jpeg?k=5b6e6cff16cfd290e953768d63ee15f633b56348238a705c45759aa3a81ba82b&o="
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container con mt-5 pt-5">
+        <h2 class="text-dark fs-2 text-ms">Explore Hotels</h2>
+        <div class="row justify-content-center">
+          <div class="card col-lg-3 col-md-5 shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 20rem">
+            <img
+          
+              src="https://cf.bstatic.com/xdata/images/hotel/square600/522067066.jpg?k=7bce548c7382b551be6362393c59fdd4633c49ee400cf9dd4d52eb5f4ef98f89&o="
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-md-5 shadow  p-3 mb-5 bg-body-tertiary rounded" style="width: 20rem">
+            <img
+            
+              src="https://i.ytimg.com/vi/gsaLaYSizk8/maxresdefault.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-md-5 shadow  p-3 mb-5 bg-body-tertiary rounded" style="width: 20rem">
+            <img
+              src="https://cf.bstatic.com/xdata/images/hotel/square600/283374329.jpg?k=3ac15dffc1efe76b14ff3436242681ddc77e977bddd9b18b7f2283713334ca48&o="
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+          <div class="card col-lg-3 col-md-5 shadow  p-3 mb-5 bg-body-tertiary rounded" style="width: 20rem">
+            <img
+              src="https://r-xx.bstatic.com/xdata/images/hotel/263x210/100235855.jpeg?k=5b6e6cff16cfd290e953768d63ee15f633b56348238a705c45759aa3a81ba82b&o="
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- hotels card end -->
+
+      <!-- footer start -->
+      <footer class="text-center py-3 mt-5 bg-body-tertiary">
+        <p class="mb-0">&copy; 2024 All Rights Reserved .</p>
+      </footer>
+
+      <!-- footer end -->
+    <!-- </div> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
