@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display:flex ;
+    align-items:center;
+    justify-content:center;
+    background: turquoise;
+}
+/* .weather-con{
+    margin: auto;
+    max-width: 1280px;
+} */
+ /* .card-row{
+    margin: 2px;
+    height:60vh;
+ } */
+.card{
+    width: 75%;
+    padding: 0px 0;
+    background: #16BBF3;
+    height: 100%;
+    box-shadow: 0  0 11px 1px rgb(131, 130, 130);
+    
+}
+.nav1{
+    height: 50px;
+}
+.nav1 a{
+    color: #fff;
+}
+
+.dynamic-weather-icon img{
+    width: 120px;
+    object-fit: cover;
+    
+}
+
+
+
+
+@media (max-width: 576px) {
+    .nav-link.toggle {
+      flex-grow: 1;
+      text-align: center;
+    }
+  
+    .btn-group {
+      width: 100%;
+    }
+  
+    .dropdown-toggle {
+      width: 100%;
+      text-align: left;
+    }
+  }
+  
