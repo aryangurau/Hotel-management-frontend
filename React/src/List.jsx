@@ -1,4 +1,5 @@
 const List = ({ users }) => {
+  let user = users.filter((a)=>a.name.startsWith("a"))
   return (
     <div>
       <ol>
@@ -10,7 +11,7 @@ const List = ({ users }) => {
               <th>Action</th>
             </tr>
 
-            {users.map((user, index) => {
+            {user.map((user, index) => {
               return (
                 <tr key={index}>
                   <td>{index + 1}</td>
