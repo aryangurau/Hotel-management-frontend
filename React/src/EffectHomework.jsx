@@ -4,7 +4,7 @@ import "./effectHomework.css"
 
 //pulling or fetching products API
 const EffectHomework = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);  //resolves
   const [loading, setLoading] = useState(false); //pending
   const [errMSg, setErrMsg] = useState(""); //reject
 
