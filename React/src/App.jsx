@@ -1,8 +1,7 @@
 import ArrayHook from "./ArrayHook";
 import Car from "./Car";
 import Conditional from "./Conditional";
-import Effect from "./Effect";
-import EffectHomework from "./EffectHomework";
+import Effect3 from "./Effect3";
 import Goal from "./Goal";
 import InterviewHooks from "./InterviewHooks";
 import List from "./List";
@@ -10,7 +9,9 @@ import Logical from "./Logical";
 import MortageCalculator from "./MortgageCalculator";
 import ObjectHook from "./ObjectHook";
 import StateHook from "./StateHook";
-import StopWatch from "./StopWatch";
+import Effect1 from "./Effect1";
+import Effect2 from "./Effect2";
+import EffectHomework from "./EffectHomework";
 
 function App() {
   const name = "aryan" + "gurau"; //js file before the return and html or xhtml file within return
@@ -39,9 +40,10 @@ function App() {
       <ArrayHook/> */}
       {/* <InterviewHooks/>
       <MortageCalculator/> */}
-      {/* <StopWatch/> */}
-      <Effect/>
-      <EffectHomework/>
+    {/* <Effect1/>
+      <Effect2/>
+      <EffectHomework/> */}
+      <Effect3/>
    
       
     

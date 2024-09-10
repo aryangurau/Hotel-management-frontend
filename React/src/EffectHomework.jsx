@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { instance } from "../utils/axios";
-import "./effectHomework.css"
+import "./effectHomework.css";
 
 //pulling or fetching products API
 const EffectHomework = () => {
-  const [products, setProducts] = useState([]);  //resolves
+  const [products, setProducts] = useState([]); //resolves
   const [loading, setLoading] = useState(false); //pending
   const [errMSg, setErrMsg] = useState(""); //reject
 
@@ -36,28 +36,32 @@ const EffectHomework = () => {
   return (
     <>
       <div className="container py-5">
-      <div className="row px-0">
-      <h1>Products list</h1>
-      {products.length > 0 &&
-                products.map((product, id) => {
-                  return (
-                    <>
-                   
-                    <div key={id} className="card m-2 shadow cards" style={{width: '18rem' }}>
-  <img src={product.thumbnail} className="card-img-top" alt="..." />
-  <div className="card-body fw-bold">
-    <p className="card-text"> {product.title}</p>
-    <p className="card-text"> rating: {product.rating}</p>
-    <p className="card-text"> price: Rs.{product .price}</p>
-  
-   
-  </div>
-</div>
-                    </>
-                  ) })}
-        <h1>Products List</h1>
-        
-
+        <div className="row px-0">
+          <h1>Products list</h1>
+          {products.length > 0 &&
+            products.map((product, id) => {
+              return (
+                <>
+                  <div
+                    key={id}
+                    className="card m-2 shadow cards"
+                    style={{ width: "18rem" }}
+                  >
+                    <img
+                      src={product.thumbnail}
+                      className="card-img-top"
+                      alt="..."
+                    />
+                    <div className="card-body fw-bold">
+                      <p className="card-text"> {product.title}</p>
+                      <p className="card-text"> rating: {product.rating}</p>
+                      <p className="card-text"> price: Rs.{product.price}</p>
+                    </div>
+                  </div>
+                </>
+              );
+            })}
+          <h1>Products List</h1>
 
           {/* <table>
             <thead className="shadow py-5 bg-primary">
