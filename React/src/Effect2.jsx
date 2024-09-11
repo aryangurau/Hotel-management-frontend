@@ -1,45 +1,30 @@
-import { useState, useEffect } from "react";
-import { instance } from "../utils/axios";
-
+import { useState } from "react";
+import useDebounce from "../hooks/useDebounce";
+import useApi from "../hooks/useApi";
 //website data pull
 const Effect2 = () => {
-  const [recipes, setRecipes] = useState([]); //resolve
-  const [loading, setLoading] = useState(false); //pending
-  const [errMSg, setErrMsg] = useState(""); //reject
+  const [search, setSearch] = useState([]); //resolve
+  const debounceSearchTerm = useDebounce({ value: search });
 
-  useEffect(() => {
-    const controller = new AbortController();
-    const fetchData = async () => {
-      const { data } = await instance
-        .get(`/recipes`, { signal: controller.signal })
-        .catch((e) => {
-          setErrMsg(e?.response.statusText);
-          setLoading(false);
-        });
-      setRecipes(data.recipes);
-      setLoading(false);
-    };
-    try {
-      setLoading(true);
-      setErrMsg("");
-      fetchData();
-    } catch (e) {
-      setErrMsg(e.toString());
-      setLoading(false);
-    }
-    return () => controller.abort();
-  }, []);
-
+  const { loading, errMsg, data } = useApi({
+    url: `/recipes/search?q=${debounceSearchTerm}`,
+  });
   if (loading) {
     return <>Data is loading</>;
   }
-  if (errMSg) {
-    return <>{errMSg}</>;
+  if (errMsg) {
+    return <>{errMsg}</>;
   }
   return (
     <>
       <div className="container shadow ">
         <div className="row px-0">
+          <input
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
+            placeholder="Search recipes"
+          />
           <table>
             <thead className="shadow py-5 bg-primary">
               <tr>
@@ -54,8 +39,8 @@ const Effect2 = () => {
               </tr>
             </thead>
             <tbody>
-              {recipes.length > 0 &&
-                recipes.map((recipe, index) => {
+              {data?.recipes?.length > 0 &&
+                data?.recipes?.map((recipe, index) => {
                   return (
                     <>
                       <tr className="shadow-lg p-3 mb-5 bg-body-tertiary rounded">
@@ -75,7 +60,13 @@ const Effect2 = () => {
                 })}
             </tbody>
           </table>
-          {recipes && recipes.length === 0 && <>Recpies not found</>}
+          {data?.recipes && data?.recipes?.length === 0 && (
+            <>
+              <b>{recipes}</b> not found
+            </>
+          )}
+
+          {/* pagination control */}
         </div>
       </div>
     </>

@@ -1,40 +1,22 @@
-import { useEffect, useState } from "react";
-import { instance } from "../utils/axios";
+import { useState } from "react";
+
+import useDebounce from "../hooks/useDebounce";
+import useApi from "../hooks/useApi";
 
 const Effect3 = () => {
   const [search, setSearch] = useState("");
-  const [recipes, setRecipes] = useState([]); //resolve
-  const [loading, setLoading] = useState(false); //pending
-  const [errMSg, setErrMsg] = useState(""); //reject
+ 
+  const debounceSearchTerm = useDebounce({ value:search });
 
-  useEffect(() => {
-    const controller = new AbortController();
-    const fetchData = async () => {
-      const { data } = await instance
-        .get(`/recipes/search?q=${search}`, { signal: controller.signal })
-        .catch((e) => {
-          setErrMsg(e?.response.statusText);
-          setLoading(false);
-        });
-      setRecipes(data.recipes);
-      setLoading(false);
-    };
-    try {
-      setLoading(true);
-      setErrMsg("");
-      fetchData();
-    } catch (e) {
-      setErrMsg(e.toString());
-      setLoading(false);
-    }
-    return () => controller.abort();
-  }, [search]);
+  const { loading, errMsg, data } = useApi({
+    url: `/recipes/search?q=${debounceSearchTerm}`,
+  });
 
-  //   if (loading) {
-  //     return <>Data is loading</>;
-  //   }
-  if (errMSg) {
-    return <>{errMSg}</>;
+  if (loading) {
+    return <>Data is loading</>;
+  }
+  if (errMsg) {
+    return <>{errMsg}</>;
   }
   return (
     <div>
@@ -43,13 +25,13 @@ const Effect3 = () => {
         placeholder="Search any food recipes"
       />
       <h1>Results</h1>
-      {recipes && recipes.length > 0 ? (
-        recipes.map((r, i) => {
+      {data?.recipes && data?.recipes.length > 0 ? (
+        data?.recipes.map((r, i) => {
           return <li key={i}>{r.name}</li>;
         })
       ) : (
         <>
-          searching <b>{search}</b> result not found
+          searching <b>{debounceSearchTerm}</b> result not found
         </>
       )}
     </div>
