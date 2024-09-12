@@ -13,6 +13,9 @@ import Effect1 from "./Effect1";
 import Effect2 from "./Effect2";
 import EffectHomework from "./EffectHomework";
 import CustomHook from "./CustomHook";
+import CompA from "./CompA";
+import CompC from "./CompC";
+import CompB from "./CompB";
 
 function App() {
   const name = "aryan" + "gurau"; //js file before the return and html or xhtml file within return
@@ -42,11 +45,16 @@ function App() {
       {/* <InterviewHooks/>
       <MortageCalculator/> */}
     {/* <Effect1/> */}
-      <Effect2/>
+      {/* <Effect2/> */}
       {/* <EffectHomework/> */}
-      {/* <Effect3/>
-   <CustomHook/> */}
+      {/* <Effect3/> */}
+   {/* <CustomHook/> */}
       
+      <CompA/> <br /> <br />
+      <CompB/> <br /> <br />
+      <CompC/>
+
+
     
     </>
   );

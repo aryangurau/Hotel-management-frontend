@@ -62,7 +62,7 @@ const Effect2 = () => {
           </table>
           {data?.recipes && data?.recipes?.length === 0 && (
             <>
-              <b>{recipes}</b> not found
+              <b>{data?.recipes}</b> not found
             </>
           )}
 
