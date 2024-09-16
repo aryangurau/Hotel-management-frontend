@@ -16,6 +16,11 @@ import CustomHook from "./CustomHook";
 import CompA from "./CompA";
 import CompC from "./CompC";
 import CompB from "./CompB";
+import { CartContextProvider } from "../context/Cart";
+import RefComp from "./RefComp";
+import RefComp2 from "./RefComp2";
+import Callback from "./Callback";
+import Memo from "./Memo";
 
 function App() {
   const name = "aryan" + "gurau"; //js file before the return and html or xhtml file within return
@@ -44,18 +49,24 @@ function App() {
       <ArrayHook/> */}
       {/* <InterviewHooks/>
       <MortageCalculator/> */}
-    {/* <Effect1/> */}
+      {/* <Effect1/> */}
       {/* <Effect2/> */}
       {/* <EffectHomework/> */}
       {/* <Effect3/> */}
-   {/* <CustomHook/> */}
-      
-      <CompA/> <br /> <br />
-      <CompB/> <br /> <br />
-      <CompC/>
+      {/* <CustomHook/> */}
+      {/* <CompA />  */}
+      <br /> <br />
 
+      {/* <CartContextProvider>
+      <CompB /> 
+      </CartContextProvider> */}
+      <br /> <br />
+      {/* <CompC /> */}
 
-    
+      {/* <RefComp/> */}
+      {/* <RefComp2/> */}
+      {/* <Callback/> */}
+      <Memo/>
     </>
   );
 }
