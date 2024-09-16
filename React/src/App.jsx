@@ -21,6 +21,12 @@ import RefComp from "./RefComp";
 import RefComp2 from "./RefComp2";
 import Callback from "./Callback";
 import Memo from "./Memo";
+import { Routes, Route } from "react-router-dom";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
+import NotFound from "./Components/NotFound";
+import Home from "./Components/Home";
+import UserLayout from "../layouts/UserLayout";
 
 function App() {
   const name = "aryan" + "gurau"; //js file before the return and html or xhtml file within return
@@ -56,17 +62,24 @@ function App() {
       {/* <CustomHook/> */}
       {/* <CompA />  */}
       <br /> <br />
-
       {/* <CartContextProvider>
       <CompB /> 
       </CartContextProvider> */}
       <br /> <br />
       {/* <CompC /> */}
-
       {/* <RefComp/> */}
       {/* <RefComp2/> */}
       {/* <Callback/> */}
-      <Memo/>
+      {/* <Memo/> */}
+      <Routes>
+      <Route path="/" element={<UserLayout/>}>
+        <Route index element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
+        </Route>
+    
+      </Routes>
     </>
   );
 }
