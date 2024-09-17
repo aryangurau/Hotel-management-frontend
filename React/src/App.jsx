@@ -27,7 +27,8 @@ import Contact from "./Components/Contact";
 import NotFound from "./Components/NotFound";
 import Home from "./Components/Home";
 import UserLayout from "../layouts/UserLayout";
-
+import Login from "./Components/Login";
+import "../../loginPage/css/login.css"
 function App() {
   const name = "aryan" + "gurau"; //js file before the return and html or xhtml file within return
   const sayHi = () => {
@@ -57,15 +58,15 @@ function App() {
       <MortageCalculator/> */}
       {/* <Effect1/> */}
       {/* <Effect2/> */}
-      {/* <EffectHomework/> */}
+    
       {/* <Effect3/> */}
       {/* <CustomHook/> */}
       {/* <CompA />  */}
-      <br /> <br />
+      {/* <br /> <br /> */}
       {/* <CartContextProvider>
       <CompB /> 
       </CartContextProvider> */}
-      <br /> <br />
+      {/* <br /> <br /> */}
       {/* <CompC /> */}
       {/* <RefComp/> */}
       {/* <RefComp2/> */}
@@ -73,9 +74,10 @@ function App() {
       {/* <Memo/> */}
       <Routes>
       <Route path="/" element={<UserLayout/>}>
-        <Route index element={<Home />} />
+        <Route index element={  <EffectHomework/>} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
+        <Route path="/login" element={<Login/>} />
         <Route path="*" element={<NotFound />} />
         </Route>
     
